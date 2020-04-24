@@ -16,11 +16,11 @@ const server = express()
 server.use(express.json());
 server.use(cors());
 server.use(helmet());
-server.use(logger);
+// server.use(logger);
 
 // 
 server.use("/api/users", usersRouter);
-server.use("api/auth", authRouter);
+server.use("/api/auth", authRouter);
 
 // test our endpoints
 server.get('/', (req, res) => {
@@ -28,9 +28,9 @@ server.get('/', (req, res) => {
 })
 
 // custom event logger
-function logger(req, res, next){
-    console.log(`${req.method} Request`)
-    next();
-}
+// function logger(req, res, next){
+//     console.log(`${req.method} Request`)
+//     next();
+// }
 
 module.exports = server;
