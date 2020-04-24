@@ -4,15 +4,8 @@ module.exports = {
 
   development: {
     client: 'sqlite3',
-    useNullAsDefault: true,
     connection: {
-      filename: './database/nodeauth1.db3'
-    },
-    migrations: {
-      directory: './database/migrations'
-    },
-    seeds: {
-      directory: './database/seeds'
+      filename: './dev.sqlite3'
     }
   },
 
