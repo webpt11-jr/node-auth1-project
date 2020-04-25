@@ -1,7 +1,7 @@
 // bring in express
 const express = require('express');
 
-// 
+// users and auth endpoints 
 const usersRouter = require("./users/users-router.js");
 const authRouter = require("./auth/auth-router.js");
 
@@ -18,7 +18,7 @@ server.use(cors());
 server.use(helmet());
 // server.use(logger);
 
-// 
+// users and auth endpoints
 server.use("/api/users", usersRouter);
 server.use("/api/auth", authRouter);
 
